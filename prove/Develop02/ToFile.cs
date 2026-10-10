@@ -8,8 +8,7 @@ class ToFile
     
     public void WriteToFIle()
     {
-        Console.WriteLine("Please Enter the file name to save to.");
-        string filename = Console.ReadLine();
+        string filename = @"C:\Users\jmbus\.vscode\CSE 210\cse210-work\prove\Develop02\journal.txt";
         foreach(JournalEntry entry in _writeEntries)
         {
             using (StreamWriter outputFile = new StreamWriter(filename))
@@ -23,8 +22,8 @@ class ToFile
 
     public void ReadToFile()
     {
-        Console.WriteLine("Please Enter the file name to load from.");
-        string filename = Console.ReadLine();
+        string filename = @"C:\Users\jmbus\.vscode\CSE 210\cse210-work\prove\Develop02\journal.txt";
         System.IO.File.ReadAllLines(filename);
+
     }
 }
