@@ -3,17 +3,22 @@ using System.IO;
 
 class ToFile
 {
+    public List<JournalEntry> _writeEntries =new List<JournalEntry>();
+
     
     public void WriteToFIle()
     {
-        
-    
-        string filename = "myFile.txt";
-        using (StreamWriter outputFile = new StreamWriter(filename))
+        Console.WriteLine("Please Enter the file name to save to.");
+        string filename = Console.ReadLine();
+        foreach(JournalEntry entry in _writeEntries)
         {
-            string color = "Blue";
-            outputFile.WriteLine($"My favorite color is {color}");
+            using (StreamWriter outputFile = new StreamWriter(filename))
+            {
+                outputFile.WriteLine(entry);
+            }
         }
+        
+        
     }
 
     public void ReadToFile()

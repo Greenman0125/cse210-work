@@ -8,6 +8,8 @@ class Program
 
         Journal myJournal=new Journal();
 
+        ToFile myFile=new ToFile();
+
        int response = 0;
 
        while(response !=5)
@@ -27,7 +29,7 @@ class Program
                     //Call ReadFromFile()
                     break;
                 case 4:
-                    Console.WriteLine("Save");
+                    myFile.WriteToFIle();
                     //Call WriteToFIle()
                     break;
             }
