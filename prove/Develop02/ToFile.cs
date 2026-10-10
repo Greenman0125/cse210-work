@@ -9,15 +9,10 @@ class ToFile
     public void WriteToFIle()
     {
         string filename = @"C:\Users\jmbus\.vscode\CSE 210\cse210-work\prove\Develop02\journal.txt";
-        foreach(JournalEntry entry in _writeEntries)
-        {
-            using (StreamWriter outputFile = new StreamWriter(filename))
+        using (StreamWriter outputFile = new StreamWriter(filename))
             {
-                outputFile.WriteLine(entry);
+                    outputFile.WriteLine(_writeEntries);        
             }
-        }
-        
-        
     }
 
     public void ReadToFile()
