@@ -23,11 +23,11 @@ class Program
                     myJournal.DisplayJournal();
                     break;
                 case 3:
-                    Console.WriteLine("Save");
+                    Console.WriteLine("Load");
                     //Call ReadFromFile()
                     break;
                 case 4:
-                    Console.WriteLine("Write");
+                    Console.WriteLine("Save");
                     //Call WriteToFIle()
                     break;
             }
