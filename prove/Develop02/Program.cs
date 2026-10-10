@@ -10,6 +10,7 @@ class Program
 
         ToFile myFile=new ToFile();
 
+
        int response = 0;
 
        while(response !=5)
@@ -25,7 +26,7 @@ class Program
                     myJournal.DisplayJournal();
                     break;
                 case 3:
-                    Console.WriteLine("Load");
+                    myFile.ReadToFile();
                     //Call ReadFromFile()
                     break;
                 case 4:

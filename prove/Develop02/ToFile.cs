@@ -23,15 +23,8 @@ class ToFile
 
     public void ReadToFile()
     {
-        string filename = "myFile.txt";
-        string[] lines = System.IO.File.ReadAllLines(filename);
-
-        foreach (string line in lines)
-        {
-            string[] parts = line.Split(",");
-
-            string firstName = parts[0];
-            string lastName = parts[1];
-        }
+        Console.WriteLine("Please Enter the file name to load from.");
+        string filename = Console.ReadLine();
+        System.IO.File.ReadAllLines(filename);
     }
 }
