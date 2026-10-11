@@ -1,5 +1,6 @@
 using System;
-
+using System.Collections.Generic;
+using System.IO;
 class Program
 {
     static void Main(string[] args)
@@ -9,7 +10,11 @@ class Program
         Journal myJournal=new Journal();
 
         ToFile myFile=new ToFile();
-
+        myFile._date="today";
+        myFile._prompt="How are you and this is a test?";
+        myFile._response="Good, but not really";
+        List<ToFile> fixthis= new List<ToFile>();
+        fixthis.Add(myFile);
 
        int response = 0;
 
@@ -30,7 +35,7 @@ class Program
                     //Call ReadFromFile()
                     break;
                 case 4:
-                    myFile.WriteToFIle();
+                    myFile.WriteToFIle(_writeEntries);
                     //Call WriteToFIle()
                     break;
             }
